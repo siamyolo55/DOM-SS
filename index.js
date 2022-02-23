@@ -21,12 +21,3 @@ button.addEventListener('click', (e) => {
     document.getElementById('hover').checked ? checks.push('hover') : console.log('hover not checked')
     window.api.send('toMain', data)
 })
-
-window.addEventListener('mouseover', (e) => {
-    e.preventDefault()
-    let x = e.pageX
-    let y = e.pageY
-    //console.log({x,y})
-    cords.push({x,y})
-    window.api.send('toMainCords', cords)
-})

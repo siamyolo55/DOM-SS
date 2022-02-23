@@ -69,12 +69,19 @@ let js = `
         // disable button/a tags
         // e.disabled = true
         //e.style.pointer-events = "none"
-
-
         
         // send xpath,x,y to backend, highlight the element, take an ss
         //async let result = await axios.post('')
     
+    })
+    
+    document.addEventListener('mouseover', (e) => {
+        e.preventDefault()
+        let x = e.pageX
+        let y = e.pageY
+        console.log({x,y})
+        //cords.push({x,y})
+        //window.api.send('toMainCords', cords)
     })`
 
     const test = async (url) => {
